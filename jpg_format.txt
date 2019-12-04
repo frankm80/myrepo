@@ -1,0 +1,17 @@
+typedef struct _JFIFHeader
+{
+  BYTE SOI[2];          /* 00h  Start of Image Marker     */
+  BYTE APP0[2];         /* 02h  Application Use Marker    */
+  BYTE Length[2];       /* 04h  Length of APP0 Field      */
+  BYTE Identifier[5];   /* 06h  "JFIF" (zero terminated) Id String */
+  BYTE Version[2];      /* 07h  JFIF Format Revision      */
+  BYTE Units;           /* 09h  Units used for Resolution */
+  BYTE Xdensity[2];     /* 0Ah  Horizontal Resolution     */
+  BYTE Ydensity[2];     /* 0Ch  Vertical Resolution       */
+  BYTE XThumbnail;      /* 0Eh  Horizontal Pixel Count    */
+  BYTE YThumbnail;      /* 0Fh  Vertical Pixel Count      */
+} JFIFHEAD;
+
+
+
+ 
